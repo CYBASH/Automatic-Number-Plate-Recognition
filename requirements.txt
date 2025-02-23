@@ -1,0 +1,12 @@
+#create python .venv 3.11.1
+
+# pip install -e .
+
+firebase_admin
+huggingface_hub
+numpy==1.26.4
+paddleocr
+paddlepaddle
+protobuf==3.20.2
+# torch==2.5.0
+torchvision==0.15.2

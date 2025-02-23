@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Dashboard</title>
+        <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+        <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+        <link rel="stylesheet" href="adminview.css">
+    </head>
+    <body>
+        <header>
+            <h1>Admin Dashboard</h1>
+        </header>
+    
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="adminview.html">Dashboard</a>
+            <a href="AddNewVehical.html">Add New Vehicle</a>
+            <a href="Login.html">Logout</a>
+        </nav>
+    
+        <div class="container">
+            <h1>Vehicle Entry and Exit Records</h1>
+    
+            <div class="controls">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search records...">
+                    <button id="searchButton">Search</button>
+                </div>
+    
+                <div class="date-filter">
+                    <input type="date" id="startDate">
+                    <span>to</span>
+                    <input type="date" id="endDate">
+                    <button id="filterButton">Filter</button>
+                    <button id="exportButton" class="export-btn" onclick="exportToExcel()">Export to Excel</button>
+                </div>
+            </div>
+    
+            <div class="table-container">
+                <table id="recordsTable">
+                    <thead>
+                        <tr>
+                            <th>Vehicle Image</th>
+                            <th>Vehicle Number</th>
+                            <th>Owner Name</th>
+                            <th>Phone Number</th>
+                            <th>Address</th>
+                            <th>Year</th>
+                            <th>Department</th>
+                            <th>Entry Time</th>
+                            <th>Exit Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Table rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+        <script type="module" src="./adminview.js"></script>
+
+        </script>
+    </body>
+</html>
