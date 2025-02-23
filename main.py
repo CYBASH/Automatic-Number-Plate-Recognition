@@ -26,7 +26,7 @@ count = 0
 #Class Names
 className = ["License"]
 #Initialize the Paddle OCR
-ocr = PaddleOCR(use_angle_cls = True, use_gpu = True)
+ocr = PaddleOCR(use_angle_cls = True, use_gpu = False)
 
 def paddle_ocr(frame, x1, y1, x2, y2):
     frame = frame[y1:y2, x1: x2]
