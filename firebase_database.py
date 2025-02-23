@@ -3,7 +3,7 @@ from firebase_admin import credentials, firestore
 from datetime import datetime
 
 # Initialize Firebase Admin SDK
-cred = credentials.Certificate('./UI/loginpage-6a191-firebase-adminsdk-vzzye-0aaa528855.json')  # Replace with your service account key file path
+cred = credentials.Certificate('./loginpage-6a191-firebase-adminsdk-vzzye-0aaa528855.json')  # Replace with your service account key file path
 firebase_admin.initialize_app(cred)
 
 # Initialize Firestore client
